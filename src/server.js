@@ -1,6 +1,6 @@
 const express = require("express");
 const UserModel = require("./Model/user.model");
-const ProductModel = require("./Model/product.model");
+
 const mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 mongoose.set("strictQuery", false);
