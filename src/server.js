@@ -8,7 +8,7 @@ mongoose.set("strictQuery", false);
 const app = express();
 
 app.use(bodyParser.json());
-app.get("/", () => {
+app.get("/", (req, res) => {
   res.send("King");
 });
 app.post("/signup", async (req, res) => {
