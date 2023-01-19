@@ -3,11 +3,14 @@ const UserModel = require("./Model/user.model");
 
 const mongoose = require("mongoose");
 var bodyParser = require("body-parser");
+const res = require("express/lib/response");
 mongoose.set("strictQuery", false);
 const app = express();
 
 app.use(bodyParser.json());
-
+app.get("/", () => {
+  res.send("King");
+});
 app.post("/signup", async (req, res) => {
   const { name, email, pass } = req.body;
   const user = new UserModel({
